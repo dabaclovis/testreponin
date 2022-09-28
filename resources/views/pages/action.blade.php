@@ -177,7 +177,7 @@
             <p><b>Personal References</b></p>
             <ul class="w3-ul list-group list-group-flush">
                 <li>Contact me on linkedin and I will provide you with the necessary information needed</li>
-                <li><a href="https://linkedin.com/in/dabaclovis" class="btn btn-primary text-white" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="https://linkedin.com/in/dabaclovis" class="btn btn-primary btn-block text-white" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
             </ul>
         </div>
     </div>

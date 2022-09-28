@@ -31,6 +31,9 @@
                 <li class="nav-item">
                     <a href="{{ route('pages.index') }}" class="nav-link {{ request()->is('/') ? 'active' : '' }}">Home</a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('pages.about') }}" class="nav-link {{ request()->is('about') ? 'active' : '' }}">About</a>
+                </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -51,7 +54,7 @@
         </div>
         <div class="w3-center justify-content-center align-content-center w3-text-white text-white">
             <div>&copy;2022. All Right Reserve</div>
-            <div><a href="{{ route('pages.index') }}">brotherforall.com</a></div>
+            <div><a href="{{ route('pages.index') }}" >brotherforall.com</a></div>
         </div>
     </div>
 </div>
