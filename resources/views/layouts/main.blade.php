@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>my online profile | cloud/devops engineer | cicd principles</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="refresh" content="420" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -18,7 +19,7 @@
   <body>
     <nav class="navbar navbar-expand-md navbar-dark shadow-sm bg-dark sticky-top">
         <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ route('pages.index') }}">
             <h4>Myprofile</h4>
         </a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -27,23 +28,13 @@
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
-                    </div>
+                    <a href="{{ route('pages.index') }}" class="nav-link {{ request()->is('/') ? 'active' : '' }}">Home</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
         </div>
@@ -52,7 +43,18 @@
     <main class="container py-4">
         @yield('content')
     </main>
-
+<div class="bg-secondary p-2">
+    <div class="container">
+        <div class="w3-center justify-content-center align-content-center w3-bottombar">
+            <a href="" class="btn btn-primary">Contact</a>
+            <a href="" class="btn btn-primary">Policy</a>
+        </div>
+        <div class="w3-center justify-content-center align-content-center w3-text-white text-white">
+            <div>&copy;2022. All Right Reserve</div>
+            <div><a href="{{ route('pages.index') }}">brotherforall.com</a></div>
+        </div>
+    </div>
+</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="{{ asset('jquery/jquery.js') }}"></script>
@@ -64,12 +66,12 @@
 
     <script>
         $(document).ready(function () {
-            $('#tabs').tabs({
+            $('#accord').accordion({
                 collapsible:true,
                 heightStyle:"content",
-                // event:"mouseover",
+                active:0,
             });
-            $('#menu').menu();
+
         });
     </script>
   </body>
