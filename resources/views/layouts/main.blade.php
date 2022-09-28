@@ -69,6 +69,7 @@
                 heightStyle:"content",
                 // event:"mouseover",
             });
+            $('#menu').menu();
         });
     </script>
   </body>
